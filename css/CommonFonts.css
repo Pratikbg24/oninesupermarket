@@ -1,0 +1,88 @@
+﻿.MyFont1
+{
+	font-family:'Century Schoolbook',Impact, Charcoal, sans-serif;
+	font-size:larger;
+	font-style:normal;
+	color:#000000;
+}
+
+.MyFont2
+{
+	font-family:Calibri,Impact, Charcoal, sans-serif;
+	font-size:large;
+	font-style:normal;
+	color:#000000;
+}
+
+.MyFont3
+{
+	font-family:'Cambria Math',Impact, Charcoal, sans-serif;
+	font-size:medium;
+	font-style:normal;
+	color:#000000;
+	text-align:justify;
+}
+
+.MyFont4
+{
+	font-family:'Cambria Math',Impact, Charcoal, sans-serif;
+	font-size:medium;
+	font-style:normal;
+	color:#0026ff;
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 0px solid #000000;/*#73AD21#CC6600*/
+    padding: 15px; 
+    width: 180px;
+    /*height: 250px;*/    
+}
+
+#rcorners1 {
+    border-radius: 25px;
+    border: 0px solid #000000;/*#73AD21#CC6600*/
+    padding: 15px; 
+    width: 180px;
+    /*height: 250px;*/    
+}
+
+#rcorners3 {
+    border-radius: 25px;
+    border: 0px solid #000000;/*#73AD21#CC6600*/
+    padding: 15px; 
+    width: 250px;
+    /*height: 250px;*/    
+}
+
+#rcorners4 {
+    border-radius: 25px;
+    border: 0px solid #000000;/*#73AD21#CC6600*/
+    padding: 15px; 
+    width: 250px;
+    /*height: 250px;*/    
+}
+
+table, th, td{ vertical-align:top; box-sizing:border-box;}
+table, th{table-layout:auto;}
+table{width:47%; 
+margin-bottom:15px;
+}
+th, td{padding:5px 8px;}
+
+.rounded, input, button, textarea, #header input, #footer input, #slide-wrapper figcaption, .avatar, #comments li, .faico a, #twitter, 
+.pagination a, .pagination strong{border-radius:6px;}
+
+.container h1, .container h2, .container h3, .container h4, .container h5, .container h6, .container .heading{padding-bottom:8px; border-bottom:1px solid;}
+/*table {
+  border-spacing: 5px 12px;
+  padding: 0 8px 8px 0;
+  border: 1px solid orange;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid blue;
+  text-align: center;
+}*/

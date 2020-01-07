@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMasterPage.master.cs" Inherits="WebPages_UserMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title></title>
+
+      <link rel="stylesheet" href="../User/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../User/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../User/css/owl.carousel.css">
+        <link rel="stylesheet" href="../User/css/owl.theme.css">
+        <link rel="stylesheet" href="../User/css/animate.css">
+        <link rel="stylesheet" href="../User/css/flexslider.css">
+        <link rel="stylesheet" href="../User/css/pricing.css">
+        <link rel="stylesheet" href="../User/css/main.css">
+
+    <link href="../css/CommonFonts.css" rel="stylesheet" type="text/css" />
+
+        <script src="../User/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="../User/js/jquery.flexslider.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    controlsContainer: ".flexslider-container"
+                });
+            });
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(24.909439, 91.833800),
+                    zoom: 16,
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(24.909439, 91.833800),
+                    title: "Mamma's Kitchen Restaurant"
+                });
+
+                // To add the marker to the map, call setMap();
+                marker.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+    <body data-spy="scroll" data-target="#template-navbar">
+
+    <form id="form1" runat="server">
+
+       <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Food-fair-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                 
+                    <a class="navbar-brand" href="#">
+                       <img id="logo" src="../Images/download.jfif" class="logo img-responsive">  </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="Food-fair-toggle">
+                   
+                   
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="AdminLogin.aspx">Admin Login</a></li>
+                        <li><a href="UserHome.aspx">HOME</a></li>
+                        <li><a href="#about">ABOUTUS</a></li>
+                        <li><a href="ViewItems.aspx">VEGETABLES</a></li>
+                        <li><a href="#breakfast">CONTACT</a></li>
+                        <li><a href="ViewCart.aspx">CART</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.row -->
+        </nav>
+
+
+     
+    <!--== 5. Header ==-->
+        <div>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   </div>
+
+  
+     <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="copyright text-center">
+                            <p>
+                                &copy; Copyright, 2015 <a href="#">Your Website Link.</a> Theme by <a href="http://themewagon.com/"  target="_blank">ThemeWagon</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+ <%-- <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>--%>
+  
+
+    <script src="../User/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../User/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+    <script src="../User/js/jquery.flexslider.min.js" type="text/javascript"></script>
+    <script src="../User/js/jquery.hoverdir.js" type="text/javascript"></script>
+    <script src="../User/js/jquery.mixitup.min.js" type="text/javascript"></script>
+    <script src="../User/js/jQuery.scrollSpeed.js" type="text/javascript"></script>
+    <script src="../User/js/jquery.validate.js" type="text/javascript"></script>
+    <script src="../User/js/jssor.core.js" type="text/javascript"></script>
+    <script src="../User/js/jssor.slider.js" type="text/javascript"></script>
+    <script src="../User/js/jssor.utils.js" type="text/javascript"></script>
+    <script src="../User/js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="../User/js/script.js" type="text/javascript"></script>
+    <script src="../User/js/wow.min.js" type="text/javascript"></script>
+
+
+    </form>
+</body>
+
+</html>
